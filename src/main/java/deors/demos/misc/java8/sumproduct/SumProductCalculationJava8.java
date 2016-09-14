@@ -5,7 +5,13 @@ import java.util.List;
 
 import org.javatuples.Pair;
 
-public class SumProductCalculationJava8 {
+public final class SumProductCalculationJava8 {
+
+    static Integer result;
+
+    private SumProductCalculationJava8() {
+        super();
+    }
 
     public static void main(String[] args) {
 
@@ -25,9 +31,9 @@ public class SumProductCalculationJava8 {
         thePairList.add(new Pair<Integer, Integer>(34, 13));
         thePairList.add(new Pair<Integer, Integer>(36, 14));
 
-        Integer result = thePairList.parallelStream().
+        result = thePairList.parallelStream().
             mapToInt(p -> p.getValue0() * p.getValue1()).sum();
 
-        System.out.printf("the final result is %s\n", result);
+        System.out.printf("the final result is %s%n", result);
     }
 }

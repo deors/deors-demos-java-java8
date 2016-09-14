@@ -12,7 +12,9 @@ public class SumProductCalculationJava7
 
     private static final long serialVersionUID = 6939566748704874245L;
 
-    private int threshold = 10;
+    private final int threshold = 10;
+
+    static Integer result;
 
     List<Pair<Integer, Integer>> pairList;
 
@@ -24,7 +26,7 @@ public class SumProductCalculationJava7
     @Override
     protected Integer compute() {
 
-        System.out.printf("fragment %s size %d\n", this, pairList.size());
+        System.out.printf("fragment %s size %d%n", this, pairList.size());
 
         if (pairList.size() <= threshold) {
             return computeDirect();
@@ -49,7 +51,7 @@ public class SumProductCalculationJava7
             sumproduct += pair.getValue0() * pair.getValue1();
         }
 
-        System.out.printf("fragment %s total %s\n", this, sumproduct);
+        System.out.printf("fragment %s total %s%n", this, sumproduct);
 
         return sumproduct;
     }
@@ -130,8 +132,8 @@ public class SumProductCalculationJava7
 
         SumProductCalculationJava7 theTask = new SumProductCalculationJava7(thePairList);
         ForkJoinPool thePool = new ForkJoinPool();
-        Integer result = thePool.invoke(theTask);
+        result = thePool.invoke(theTask);
 
-        System.out.printf("the final result is %s\n", result);
+        System.out.printf("the final result is %s%n", result);
     }
 }
