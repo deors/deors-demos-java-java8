@@ -7,7 +7,13 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-public class NextPaymentJava7 {
+public final class NextPaymentJava7 {
+
+    static String result;
+
+    private NextPaymentJava7() {
+        super();
+    }
 
     public static void main(String[] args) {
 
@@ -45,10 +51,11 @@ public class NextPaymentJava7 {
         Collections.sort(futures);
 
         if (futures.isEmpty()) {
-            System.out.println("No more payments expected");
+            result = "No more payments expected";
         } else {
             Date nextPayment = futures.get(0);
-            System.out.println("The next payment is due for: " + nextPayment);
+            result = "The next payment is due for: " + nextPayment;
         }
+        System.out.println(result);
     }
 }
