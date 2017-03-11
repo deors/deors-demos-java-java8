@@ -1,4 +1,4 @@
-package deors.demos.misc.java8.datelist;
+package deors.demos.java.java8.datelist;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

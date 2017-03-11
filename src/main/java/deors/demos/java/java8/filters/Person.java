@@ -1,4 +1,4 @@
-package deors.demos.misc.java8.filters;
+package deors.demos.java.java8.filters;
 
 import java.time.LocalDate;
 

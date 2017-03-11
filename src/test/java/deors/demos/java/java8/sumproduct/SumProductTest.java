@@ -1,4 +1,4 @@
-package deors.demos.misc.java8;
+package deors.demos.java.java8.sumproduct;
 
 import static org.junit.Assert.assertEquals;
 

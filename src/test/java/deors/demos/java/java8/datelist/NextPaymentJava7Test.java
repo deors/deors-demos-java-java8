@@ -1,4 +1,4 @@
-package deors.demos.misc.java8.datelist;
+package deors.demos.java.java8.datelist;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
