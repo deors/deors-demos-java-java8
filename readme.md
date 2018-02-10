@@ -1,4 +1,4 @@
-deors.demos.java.java8
+deors-demos-java-java8
 ======================
 
 Three examples of Java 8 new features in language and APIs.
