@@ -23,12 +23,12 @@ public final class PersonFilters {
 
         List<Person> persons = fillData();
 
-        System.out.println("select people with more than 40 years");
+        System.out.println("select people with more than 45 years");
         persons.stream().
-            filter(p -> p.birthDate.isBefore(LocalDate.now().minusYears(40))).
+            filter(p -> p.birthDate.isBefore(LocalDate.of(2024, 11, 29).minusYears(45))).
             forEach(System.out::println);
         result1 = persons.stream().
-            filter(p -> p.birthDate.isBefore(LocalDate.now().minusYears(40))).
+            filter(p -> p.birthDate.isBefore(LocalDate.of(2024, 11, 29).minusYears(45))).
             map(p -> p.toString()).
             collect(Collectors.joining(","));
 
